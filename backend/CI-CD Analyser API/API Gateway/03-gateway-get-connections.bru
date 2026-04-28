@@ -1,0 +1,16 @@
+meta {
+  name: Gateway - Get Connections
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:8085/api/connections
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer YOUR_JWT_TOKEN_HERE
+  X-CSRF-Token: YOUR_CSRF_TOKEN_HERE
+}

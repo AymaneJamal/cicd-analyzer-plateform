@@ -1,0 +1,21 @@
+meta {
+  name: Toggle Connection Active
+  type: http
+  seq: 9
+}
+
+put {
+  url: http://localhost:5003/api/connections/1/toggle
+  body: json
+  auth: none
+}
+
+headers {
+  X-User-Email: aymane@app.com
+}
+
+body:json {
+  {
+    "isActive": true
+  }
+}

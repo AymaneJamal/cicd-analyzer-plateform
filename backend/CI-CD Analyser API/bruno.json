@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "CI/CD Analyser API",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

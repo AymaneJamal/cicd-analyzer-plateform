@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+venv/
+.venv/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Rapports
+backend/Rapports/

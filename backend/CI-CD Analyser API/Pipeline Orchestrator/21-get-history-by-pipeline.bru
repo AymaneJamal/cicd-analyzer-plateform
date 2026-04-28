@@ -1,0 +1,20 @@
+meta {
+  name: Get History by Pipeline
+  type: http
+  seq: 21
+}
+
+get {
+  url: http://localhost:5003/api/optimization/history/pipeline?connectionId=&pipelineName=
+  body: none
+  auth: none
+}
+
+params:query {
+  connectionId: 
+  pipelineName: 
+}
+
+headers {
+  X-User-Email: aymane@app.com
+}

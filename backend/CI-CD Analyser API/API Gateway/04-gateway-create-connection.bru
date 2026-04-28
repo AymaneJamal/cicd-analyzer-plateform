@@ -1,0 +1,25 @@
+meta {
+  name: Gateway - Create Connection
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8085/api/connections
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer <JWT_TOKEN>
+  X-CSRF-Token: <CSRF_TOKEN>
+}
+
+body:json {
+  {
+    "name": "Jenkins Local",
+    "url": "http://localhost:8080",
+    "username": "admin",
+    "password": "<JENKINS_PASSWORD>"
+  }
+}

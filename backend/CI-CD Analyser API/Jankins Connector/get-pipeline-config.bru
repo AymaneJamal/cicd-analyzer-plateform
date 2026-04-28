@@ -1,0 +1,19 @@
+meta {
+  name: Get Pipeline Config
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:5001/api/jenkins/pipelines/patient-management-logging-materials/config
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "url": "",
+    "username": "",
+    "password": ""
+  }
+}

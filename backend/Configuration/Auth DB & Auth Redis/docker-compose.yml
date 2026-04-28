@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  auth-postgres:
+    image: postgres:15-alpine
+    container_name: auth-db
+    restart: always
+    environment:
+      POSTGRES_DB: auth_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5439:5432"
+    volumes:
+      - auth_pgdata:/var/lib/postgresql/data
+
+  auth-redis:
+    image: redis:7-alpine
+    container_name: auth-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - auth_redisdata:/data
+
+volumes:
+  auth_pgdata:
+  auth_redisdata:

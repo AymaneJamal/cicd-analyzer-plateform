@@ -1,0 +1,19 @@
+meta {
+  name: Get Pipeline Config
+  type: http
+  seq: 14
+}
+
+get {
+  url: http://localhost:5003/api/pipelines/patient-management-logging-materials/config?connectionId=
+  body: none
+  auth: none
+}
+
+params:query {
+  connectionId: 
+}
+
+headers {
+  X-User-Email: aymane@app.com
+}

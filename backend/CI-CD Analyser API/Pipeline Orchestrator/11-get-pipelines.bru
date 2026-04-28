@@ -1,0 +1,19 @@
+meta {
+  name: Get Pipelines
+  type: http
+  seq: 11
+}
+
+get {
+  url: http://localhost:5003/api/pipelines?connectionId=
+  body: none
+  auth: none
+}
+
+params:query {
+  connectionId: 
+}
+
+headers {
+  X-User-Email: aymane@app.com
+}

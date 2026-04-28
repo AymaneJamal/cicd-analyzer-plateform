@@ -1,0 +1,19 @@
+meta {
+  name: Get Build Logs
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:5001/api/jenkins/pipelines/patient-management-logging-materials/builds/121/logs
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "url": "",
+    "username": "",
+    "password": ""
+  }
+}

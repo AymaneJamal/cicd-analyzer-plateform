@@ -1,0 +1,19 @@
+meta {
+  name: Get Build Logs
+  type: http
+  seq: 13
+}
+
+get {
+  url: http://localhost:5003/api/pipelines/patient-management-logging-materials/builds/121/logs?connectionId=
+  body: none
+  auth: none
+}
+
+params:query {
+  connectionId: 
+}
+
+headers {
+  X-User-Email: aymane@app.com
+}

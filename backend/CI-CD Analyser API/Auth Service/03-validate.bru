@@ -1,0 +1,19 @@
+meta {
+  name: Validate Token
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:5004/api/auth/validate
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+  "token": "<JWT_TOKEN>",
+    "csrfToken": "<CSRF_TOKEN>",
+    "requestMethod": "POST"
+  }
+}

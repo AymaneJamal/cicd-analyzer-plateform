@@ -1,0 +1,33 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        # Routes publiques (sans authentification)
+        - id: auth-register
+          uri: http://localhost:5004
+          predicates:
+            - Path=/api/auth/register
+            - Method=POST
+
+        - id: auth-login
+          uri: http://localhost:5004
+          predicates:
+            - Path=/api/auth/login
+            - Method=POST
+
+        # Routes protégées (avec authentification)
+        - id: pipeline-orchestrator
+          uri: http://localhost:5003
+          predicates:
+            - Path=/api/**
+          filters:
+            - AuthenticationFilter
+
+# Auth Service URL
+auth-service:
+  url: http://localhost:5004

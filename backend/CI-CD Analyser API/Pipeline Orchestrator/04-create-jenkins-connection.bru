@@ -1,0 +1,24 @@
+meta {
+  name: Create Jenkins Connection
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:5003/api/connections
+  body: json
+  auth: none
+}
+
+headers {
+  X-User-Email: aymane@app.com
+}
+
+body:json {
+  {
+    "name": "Jenkins Local",
+    "url": "http://localhost:8080",
+    "username": "",
+    "password": ""
+  }
+}

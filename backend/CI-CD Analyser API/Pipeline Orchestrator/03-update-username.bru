@@ -1,0 +1,21 @@
+meta {
+  name: Update Username
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://localhost:5003/api/users/me/username
+  body: json
+  auth: none
+}
+
+headers {
+  X-User-Email: aymane@app.com
+}
+
+body:json {
+  {
+    "username": ""
+  }
+}

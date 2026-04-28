@@ -1,0 +1,22 @@
+meta {
+  name: Optimize Pipeline
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://localhost:5002/api/optimize
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "buildStatistics": "",
+    "pipelineConfig": "",
+    "buildLog": "",
+    "buildHistory": "",
+    "agentInfo": "",
+    "serverInfo": ""
+  }
+}
